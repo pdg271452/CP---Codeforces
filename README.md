@@ -6,15 +6,19 @@
 
 | Total Problems | Topics |
 |---|---|
-| 1 | 3 |
+| 2 | 7 |
 
 ---
 
 ## 📂 Topic-Wise Problems
 
 - [brute force](#brute-force) (1)
-- [dp](#dp) (1)
-- [greedy](#greedy) (1)
+- [data structures](#data-structures) (1)
+- [dfs and similar](#dfs-and-similar) (1)
+- [dp](#dp) (2)
+- [greedy](#greedy) (2)
+- [sortings](#sortings) (1)
+- [trees](#trees) (1)
 
 ---
 
@@ -24,17 +28,43 @@
 |---|---------|------------|----------|
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
 
+### data structures
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
+
+### dfs and similar
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
+
 ### dp
 
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 
 ### greedy
 
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
+
+### sortings
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
+
+### trees
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 
 ---
 
