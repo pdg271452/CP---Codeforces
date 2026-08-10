@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 6 | 8 |
+| 7 | 9 |
 
 ---
 
@@ -14,6 +14,7 @@
 
 - [Uncategorized](#uncategorized) (4)
 - [brute force](#brute-force) (1)
+- [constructive algorithms](#constructive-algorithms) (1)
 - [data structures](#data-structures) (1)
 - [dfs and similar](#dfs-and-similar) (1)
 - [dp](#dp) (2)
@@ -37,6 +38,12 @@
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
+
+### constructive algorithms
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2250B | [String Construction](https://codeforces.com/contest/2250/problem/B) | 1000 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/B%20-%20String%20Construction/solution.cpp) |
 
 ### data structures
 
