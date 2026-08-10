@@ -1,17 +1,221 @@
-<h2><a href="https://codeforces.com/contest/2255/problem/E1" target="_blank" rel="noopener noreferrer">2255E1 — What Will Remain at the End? (Easy Version)</a></h2>
-
-| | |
-|---|---|
-| **Difficulty** | Unrated |
-| **Language** | C++23 (GCC 14-64, msys2) |
-| **Verdict** | ✅ Accepted |
-| **Problem Link** | [Codeforces 2255E1](https://codeforces.com/contest/2255/problem/E1) |
-
-## Topics
-`brute force` `data structures`
-
----
-
-## Problem Statement
-
-<div class="header"><div class="title">E1. What Will Remain at the End? (Easy Version)</div><div class="time-limit"><div class="property-title">time limit per test</div>3 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div><div><p>   </p><p><span class="tex-font-style-bf">This is the easy version of the problem. The only difference between the two versions is the set of allowed values for the initial array and for $$$x$$$ in operations of type $$$1$$$. In this version, all these values belong to $$$\{-1,0,1\}$$$. You can make hacks only if both versions of the problem are solved.</span></p><p>Before her final sortie, Chtholly asks Willem three questions.</p><p>The second is this: what will remain if the sky truly reaches its end?</p><p>Willem cannot answer her directly. Instead, he opens a chronicle containing $$$n$$$ records, numbered from $$$1$$$ to $$$n$$$. Each record holds an integer: a positive value represents hope, while a negative value represents despair.</p><p>The initial contents of the chronicle form an array $$$a_1,a_2,\ldots,a_n$$$, called <span class="tex-font-style-bf">version</span> $$$0$$$. Chtholly then performs $$$q$$$ operations. For each $$$1\le i\le q$$$, the $$$i$$$-th operation creates a new <span class="tex-font-style-bf">version</span> $$$i$$$ from version $$$i-1$$$.</p><p>Each operation has one of the following four types:</p><ul> <li> $$$\texttt{1 l r x}$$$: set $$$a_k\gets x$$$ for every $$$l\le k\le r$$$. </li><li> $$$\texttt{2 l r}$$$: set $$$a_k\gets -a_k$$$ for every $$$l\le k\le r$$$. </li><li> $$$\texttt{3 l r}$$$: set $$$a_k\gets\max(a_k,0)$$$ for every $$$l\le k\le r$$$. </li><li> $$$\texttt{4 p}$$$: consider the value at position $$$p$$$ in every previous version $$$0,1,\ldots, i-1$$$. Let these values be $$$b_0,b_1,\ldots,b_{i-1}$$$. Find the maximum sum over all non-empty subarrays$$$^{\text{∗}}$$$ of this sequence. </li></ul><p>If the operation is of type $$$1$$$, $$$2$$$, or $$$3$$$, the specified modification is applied to version $$$i-1$$$ to obtain version $$$i$$$. An operation of type $$$4$$$ does not modify the array, so version $$$i$$$ is identical to version $$$i-1$$$.</p><p><span class="tex-font-style-bf">The operations are encoded and must be processed in order.</span> Their decoding depends on $$$\mathrm{lastans}$$$, which is updated after every operation of type $$$4$$$.</p><p>Help Willem answer every operation of type $$$4$$$.</p><div class="statement-footnote"><p>$$$^{\text{∗}}$$$An array $$$c$$$ is a subarray of an array $$$b$$$ if $$$c$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.</p></div></div><div class="input-specification"><div class="section-title">Input</div><p>Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \le t \le 10^4$$$). The description of the test cases follows.</p><p>The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1\le n,q\le5\cdot10^5$$$) — the length of the array and the number of operations.</p><p>The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\ldots,a_n$$$ ($$$a_i\in\{-1,0,1\}$$$) — the array in version $$$0$$$.</p><p>Each of the next $$$q$$$ lines describes one operation in one of the following encoded formats: The first integer on the line is the operation type.</p><ul> <li> $$$\texttt{1 u v x}$$$ ($$$0\le u,v \lt 2^{64}$$$, $$$x\in\{-1,0,1\}$$$); </li><li> $$$\texttt{2 u v}$$$ ($$$0\le u,v \lt 2^{64}$$$); </li><li> $$$\texttt{3 u v}$$$ ($$$0\le u,v \lt 2^{64}$$$); </li><li> $$$\texttt{4 u}$$$ ($$$0\le u \lt 2^{64}$$$). </li></ul><p>The operations are encoded and must be processed in order. Their decoding depends on a value $$$\mathrm{lastans}$$$.</p><p>Initially, $$$\mathrm{lastans}=0$$$. After answering an operation of type $$$4$$$, set $$$\mathrm{lastans}$$$ to the least non-negative residue of its answer modulo $$$2^{64}$$$. Operations of all other types leave $$$\mathrm{lastans}$$$ unchanged.</p><p>For every encoded coordinate $$$y$$$, define $$$d(y)=\left(\left(y\oplus\mathrm{lastans}\right)\bmod n\right)+1$$$. Here, $$$\oplus$$$ denotes the <a href="https://en.wikipedia.org/wiki/Bitwise_operation#XOR">bitwise XOR operation</a>.</p><ul> <li> For an operation $$$\texttt{1 u v x}$$$, let $$$l=\min(d(u),d(v))$$$ and $$$r=\max(d(u),d(v))$$$. The value $$$x$$$ is not encoded. </li><li> For an operation $$$\texttt{2 u v}$$$ or $$$\texttt{3 u v}$$$, let $$$l=\min(d(u),d(v))$$$ and $$$r=\max(d(u),d(v))$$$. </li><li> For an operation $$$\texttt{4 u}$$$, let $$$p=d(u)$$$. </li></ul><p>The operation type is not encoded. Do not forget to update $$$\mathrm{lastans}$$$ after answering each operation of type $$$4$$$.</p><p>It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5\cdot10^5$$$.</p><p>It is guaranteed that the sum of $$$q$$$ over all test cases does not exceed $$$5\cdot10^5$$$.</p></div><div class="output-specification"><div class="section-title">Output</div><p>For every operation of type $$$4$$$, output a single integer — the maximum sum of a non-empty subarray of the sequence of the values at position $$$p$$$ over all versions preceding this operation.</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id007943641279581201" id="id0010220638130786686" class="input-output-copier">Copy</div></div><pre id="id007943641279581201"><div class="test-example-line test-example-line-even test-example-line-0">2</div><div class="test-example-line test-example-line-odd test-example-line-1">4 8</div><div class="test-example-line test-example-line-odd test-example-line-1">1 -1 1 -1</div><div class="test-example-line test-example-line-odd test-example-line-1">4 1</div><div class="test-example-line test-example-line-odd test-example-line-1">2 18446744073709551615 18446744073709551613</div><div class="test-example-line test-example-line-odd test-example-line-1">4 18446744073709551614</div><div class="test-example-line test-example-line-odd test-example-line-1">3 0 3</div><div class="test-example-line test-example-line-odd test-example-line-1">1 0 2 -1</div><div class="test-example-line test-example-line-odd test-example-line-1">4 0</div><div class="test-example-line test-example-line-odd test-example-line-1">2 2 0</div><div class="test-example-line test-example-line-odd test-example-line-1">4 0</div><div class="test-example-line test-example-line-even test-example-line-2">3 6</div><div class="test-example-line test-example-line-even test-example-line-2">1 -1 1</div><div class="test-example-line test-example-line-even test-example-line-2">4 0</div><div class="test-example-line test-example-line-even test-example-line-2">1 0 3 -1</div><div class="test-example-line test-example-line-even test-example-line-2">4 3</div><div class="test-example-line test-example-line-even test-example-line-2">2 2 3</div><div class="test-example-line test-example-line-even test-example-line-2">3 3 0</div><div class="test-example-line test-example-line-even test-example-line-2">4 3</div></pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id005919410548230495" id="id00725950918341002" class="input-output-copier">Copy</div></div><pre id="id005919410548230495"><div class="test-example-line test-example-line-odd test-example-line-1">-1</div><div class="test-example-line test-example-line-odd test-example-line-1">1</div><div class="test-example-line test-example-line-odd test-example-line-1">3</div><div class="test-example-line test-example-line-odd test-example-line-1">1</div><div class="test-example-line test-example-line-even test-example-line-2">1</div><div class="test-example-line test-example-line-even test-example-line-2">2</div><div class="test-example-line test-example-line-even test-example-line-2">2</div></pre></div></div></div><div class="note"><div class="section-title">Note</div><p>In the first test case, for the first operation, $$$\mathrm{lastans}=0$$$, so the encoded coordinate $$$1$$$ is decoded into position $$$2$$$. Only version $$$0$$$ is considered. The value at position $$$2$$$ is $$$-1$$$, hence the answer is $$$-1$$$.</p><p>Now $$$\mathrm{lastans}=2^{64}-1=18\,446\,744\,073\,709\,551\,615$$$. Therefore the encoded interval $$$[18\,446\,744\,073\,709\,551\,615,18\,446\,744\,073\,709\,551\,613]$$$ is decoded into $$$[1,3]$$$, and the encoded coordinate $$$18\,446\,744\,073\,709\,551\,614$$$ is decoded into position $$$2$$$.</p><p>Before the second query, the values at position $$$2$$$ in versions $$$0$$$, $$$1$$$, and $$$2$$$ are $$$-1$$$, $$$-1$$$, and $$$1$$$, respectively. Their maximum non-empty subarray sum is $$$1$$$.</p><p>Before the third query, the values at position $$$2$$$ in versions $$$0,1,\ldots,5$$$ form sequence $$$[-1,-1,1,1,1,-1]$$$. The three consecutive values equal to $$$1$$$ form a subarray with sum $$$3$$$.</p><p>Notice that the first, second, and third queries create versions $$$1$$$, $$$3$$$, and $$$6$$$, respectively, even though they do not change the array.</p><p>In the second test case, the first query asks about position $$$1$$$, so its answer is $$$1$$$. Then $$$\mathrm{lastans}=1$$$, and the encoded operation $$$\texttt{1 0 3 -1}$$$ is decoded into $$$\texttt{1 2 3 -1}$$$.</p><p>Before the second query, the values at position $$$3$$$ in versions $$$0$$$, $$$1$$$, and $$$2$$$ are $$$1$$$, $$$1$$$, and $$$-1$$$, respectively, so the answer is $$$2$$$.</p><p>Afterwards, $$$\mathrm{lastans}=2$$$. The encoded operations $$$\texttt{2 2 3}$$$ and $$$\texttt{3 3 0}$$$ are decoded into $$$\texttt{2 1 2}$$$ and $$$\texttt{3 2 3}$$$, respectively. Before the last query, the values at position $$$2$$$ in versions $$$0,1,\ldots,5$$$ form sequence $$$[-1,-1,-1,-1,1,1]$$$, whose maximum non-empty subarray sum is $$$2$$$.</p></div>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdint>
+ 
+using namespace std;
+ 
+// Represents a transformation tag over a sequence of operations
+struct Tag {
+    int8_t a[3];
+    int s[3];
+    int p[3];
+    int l[3];
+    int m[3];
+};
+ 
+Tag make_atomic_tag(int op_type, int extra_x = 0) {
+    Tag tag;
+    for (int v = -1; v <= 1; v++) {
+        int idx = v + 1;
+        int val = 0;
+        if (op_type == 1) val = extra_x;
+        else if (op_type == 2) val = -v;
+        else if (op_type == 3) val = max(v, 0);
+        else if (op_type == 4) val = v;
+        tag.a[idx] = (int8_t)val;
+        tag.s[idx] = val;
+        tag.p[idx] = val;
+        tag.l[idx] = val;
+        tag.m[idx] = val;
+    }
+    return tag;
+}
+ 
+Tag combine_tags(const Tag& t1, const Tag& t2) {
+    Tag res;
+    for (int v = -1; v <= 1; v++) {
+        int i = v + 1;
+        int v1 = t1.a[i];
+        int j = v1 + 1;
+        res.a[i] = t2.a[j];
+        res.s[i] = t1.s[i] + t2.s[j];
+        res.p[i] = max(t1.p[i], t1.s[i] + t2.p[j]);
+        res.l[i] = max(t2.l[j], t1.l[i] + t2.s[j]);
+        res.m[i] = max({t1.m[i], t2.m[j], t1.l[i] + t2.p[j]});
+    }
+    return res;
+}
+ 
+struct Leaf {
+    int8_t a;
+    int S, P, L, M;
+};
+ 
+struct SegTree {
+    int n;
+    vector<Leaf> leaves;
+    vector<Tag> tags;
+    vector<bool> has_tag;
+    uint64_t lastans = 0;
+    Tag tag_untouched;
+ 
+    SegTree(int n, const vector<int>& arr) : n(n) {
+        leaves.resize(n);
+        for (int i = 0; i < n; i++) {
+            int v = arr[i];
+            leaves[i] = {(int8_t)v, v, v, v, v};
+        }
+        tags.resize(4 * n);
+        has_tag.assign(4 * n, false);
+        tag_untouched = make_atomic_tag(4);
+    }
+ 
+    void apply_tag_to_leaf(Leaf& leaf, const Tag& tag) {
+        int idx = leaf.a + 1;
+        int v_next = tag.a[idx];
+        int s = tag.s[idx], p = tag.p[idx], l = tag.l[idx], m = tag.m[idx];
+ 
+        int S_new = leaf.S + s;
+        int P_new = max(leaf.P, leaf.S + p);
+        int L_new = max(l, leaf.L + s);
+        int M_new = max({leaf.M, m, leaf.L + p});
+ 
+        leaf.a = (int8_t)v_next;
+        leaf.S = S_new;
+        leaf.P = P_new;
+        leaf.L = L_new;
+        leaf.M = M_new;
+    }
+ 
+    void apply_tag_to_node(int node, const Tag& tag) {
+        if (!has_tag[node]) {
+            tags[node] = tag;
+            has_tag[node] = true;
+        } else {
+            tags[node] = combine_tags(tags[node], tag);
+        }
+    }
+ 
+    void push(int node, int l, int r) {
+        if (has_tag[node]) {
+            if (l == r) {
+                apply_tag_to_leaf(leaves[l], tags[node]);
+            } else {
+                apply_tag_to_node(2 * node, tags[node]);
+                apply_tag_to_node(2 * node + 1, tags[node]);
+            }
+            has_tag[node] = false;
+        }
+    }
+ 
+    void update_range(int node, int l, int r, int ql, int qr, const Tag& tag) {
+        push(node, l, r);
+        if (r < ql || l > qr) return;
+        if (ql <= l && r <= qr) {
+            apply_tag_to_node(node, tag);
+            return;
+        }
+        int mid = (l + r) / 2;
+        update_range(2 * node, l, mid, ql, qr, tag);
+        update_range(2 * node + 1, mid + 1, r, ql, qr, tag);
+    }
+ 
+    int query_point(int node, int l, int r, int idx) {
+        push(node, l, r);
+        if (l == r) {
+            return leaves[l].M;
+        }
+        int mid = (l + r) / 2;
+        if (idx <= mid) return query_point(2 * node, l, mid, idx);
+        else return query_point(2 * node + 1, mid + 1, r, idx);
+    }
+ 
+    int get_d(uint64_t y) {
+        return ((y ^ lastans) % n) + 1;
+    }
+ 
+    void op1(uint64_t u, uint64_t v, int x) {
+        int du = get_d(u), dv = get_d(v);
+        int l = min(du, dv) - 1, r = max(du, dv) - 1;
+        Tag tag_touched = make_atomic_tag(1, x);
+        if (l > 0) update_range(1, 0, n - 1, 0, l - 1, tag_untouched);
+        update_range(1, 0, n - 1, l, r, tag_touched);
+        if (r + 1 < n) update_range(1, 0, n - 1, r + 1, n - 1, tag_untouched);
+    }
+ 
+    void op2(uint64_t u, uint64_t v) {
+        int du = get_d(u), dv = get_d(v);
+        int l = min(du, dv) - 1, r = max(du, dv) - 1;
+        Tag tag_touched = make_atomic_tag(2);
+        if (l > 0) update_range(1, 0, n - 1, 0, l - 1, tag_untouched);
+        update_range(1, 0, n - 1, l, r, tag_touched);
+        if (r + 1 < n) update_range(1, 0, n - 1, r + 1, n - 1, tag_untouched);
+    }
+ 
+    void op3(uint64_t u, uint64_t v) {
+        int du = get_d(u), dv = get_d(v);
+        int l = min(du, dv) - 1, r = max(du, dv) - 1;
+        Tag tag_touched = make_atomic_tag(3);
+        if (l > 0) update_range(1, 0, n - 1, 0, l - 1, tag_untouched);
+        update_range(1, 0, n - 1, l, r, tag_touched);
+        if (r + 1 < n) update_range(1, 0, n - 1, r + 1, n - 1, tag_untouched);
+    }
+ 
+    int op4(uint64_t u) {
+        int p = get_d(u) - 1;
+        int ans = query_point(1, 0, n - 1, p);
+        lastans = (uint64_t)ans;
+        update_range(1, 0, n - 1, 0, n - 1, tag_untouched);
+        return ans;
+    }
+};
+ 
+void solve() {
+    int n, q;
+    if (!(cin >> n >> q)) return;
+ 
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+ 
+    SegTree st(n, a);
+ 
+    for (int i = 0; i < q; i++) {
+        int type;
+        cin >> type;
+        if (type == 1) {
+            uint64_t u, v;
+            int x;
+            cin >> u >> v >> x;
+            st.op1(u, v, x);
+        } else if (type == 2) {
+            uint64_t u, v;
+            cin >> u >> v;
+            st.op2(u, v);
+        } else if (type == 3) {
+            uint64_t u, v;
+            cin >> u >> v;
+            st.op3(u, v);
+        } else if (type == 4) {
+            uint64_t u;
+            cin >> u;
+            cout << st.op4(u) << "
+";
+        }
+    }
+}
+ 
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+ 
+    int t;
+    if (cin >> t) {
+        while (t--) {
+            solve();
+        }
+    }
+    return 0;
+}
