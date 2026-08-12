@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 9 | 11 |
+| 10 | 11 |
 
 ---
 
@@ -19,9 +19,9 @@
 - [dfs and similar](#dfs-and-similar) (1)
 - [dp](#dp) (2)
 - [greedy](#greedy) (2)
-- [implementation](#implementation) (1)
+- [implementation](#implementation) (2)
 - [math](#math) (1)
-- [sortings](#sortings) (1)
+- [sortings](#sortings) (2)
 - [trees](#trees) (1)
 
 ---
@@ -81,6 +81,7 @@
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2250A | [Threshold Movement](https://codeforces.com/contest/2250/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/A%20-%20Threshold%20Movement/solution.cpp) |
+| 2254A | [Riptide](https://codeforces.com/contest/2254/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/A%20-%20Riptide/solution.cpp) |
 
 ### math
 
@@ -92,6 +93,7 @@
 
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
+| 2254A | [Riptide](https://codeforces.com/contest/2254/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/A%20-%20Riptide/solution.cpp) |
 | 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 
 ### trees
