@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 10 | 11 |
+| 11 | 12 |
 
 ---
 
@@ -18,9 +18,10 @@
 - [data structures](#data-structures) (2)
 - [dfs and similar](#dfs-and-similar) (1)
 - [dp](#dp) (2)
+- [fft](#fft) (1)
 - [greedy](#greedy) (2)
 - [implementation](#implementation) (2)
-- [math](#math) (1)
+- [math](#math) (2)
 - [sortings](#sortings) (2)
 - [trees](#trees) (1)
 
@@ -69,6 +70,12 @@
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
 | 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 
+### fft
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2255F | [Who Will Witness the End?](https://codeforces.com/contest/2255/problem/F) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/F%20-%20Who%20Will%20Witness%20the%20End%3F/solution.cpp) |
+
 ### greedy
 
 | # | Problem | Difficulty | Solution |
@@ -88,6 +95,7 @@
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2250A | [Threshold Movement](https://codeforces.com/contest/2250/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/A%20-%20Threshold%20Movement/solution.cpp) |
+| 2255F | [Who Will Witness the End?](https://codeforces.com/contest/2255/problem/F) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/F%20-%20Who%20Will%20Witness%20the%20End%3F/solution.cpp) |
 
 ### sortings
 
