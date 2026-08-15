@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 11 | 12 |
+| 12 | 12 |
 
 ---
 
@@ -15,11 +15,11 @@
 - [Uncategorized](#uncategorized) (4)
 - [brute force](#brute-force) (3)
 - [constructive algorithms](#constructive-algorithms) (1)
-- [data structures](#data-structures) (2)
+- [data structures](#data-structures) (3)
 - [dfs and similar](#dfs-and-similar) (1)
 - [dp](#dp) (2)
 - [fft](#fft) (1)
-- [greedy](#greedy) (2)
+- [greedy](#greedy) (3)
 - [implementation](#implementation) (2)
 - [math](#math) (2)
 - [sortings](#sortings) (2)
@@ -54,6 +54,7 @@
 
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
+| 2252A | [Boss Fight](https://codeforces.com/contest/2252/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2252/A%20-%20Boss%20Fight/solution.cpp) |
 | 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 | 2255E1 | [What Will Remain at the End? (Easy Version)](https://codeforces.com/contest/2255/problem/E1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/E1%20-%20What%20Will%20Remain%20at%20the%20End%3F%20(Easy%20Version)/solution.cpp) |
 
@@ -81,6 +82,7 @@
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
+| 2252A | [Boss Fight](https://codeforces.com/contest/2252/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2252/A%20-%20Boss%20Fight/solution.cpp) |
 | 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
 
 ### implementation
