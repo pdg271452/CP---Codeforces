@@ -6,14 +6,14 @@
 
 | Total Problems | Topics |
 |---|---|
-| 12 | 12 |
+| 13 | 13 |
 
 ---
 
 ## 📂 Topic-Wise Problems
 
 - [Uncategorized](#uncategorized) (4)
-- [brute force](#brute-force) (3)
+- [brute force](#brute-force) (4)
 - [constructive algorithms](#constructive-algorithms) (1)
 - [data structures](#data-structures) (3)
 - [dfs and similar](#dfs-and-similar) (1)
@@ -23,6 +23,7 @@
 - [implementation](#implementation) (2)
 - [math](#math) (2)
 - [sortings](#sortings) (2)
+- [strings](#strings) (1)
 - [trees](#trees) (1)
 
 ---
@@ -43,6 +44,7 @@
 | 2019A | [Max Plus Size](https://codeforces.com/contest/2019/problem/A) | 800 | [C++17 (GCC 7-32)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2019/A%20-%20Max%20Plus%20Size/solution.cpp) |
 | 2250A | [Threshold Movement](https://codeforces.com/contest/2250/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/A%20-%20Threshold%20Movement/solution.cpp) |
 | 2255E1 | [What Will Remain at the End? (Easy Version)](https://codeforces.com/contest/2255/problem/E1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/E1%20-%20What%20Will%20Remain%20at%20the%20End%3F%20(Easy%20Version)/solution.cpp) |
+| 2257A | [Creating Abbreviations](https://codeforces.com/contest/2257/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2257/A%20-%20Creating%20Abbreviations/solution.cpp) |
 
 ### constructive algorithms
 
@@ -105,6 +107,12 @@
 |---|---------|------------|----------|
 | 2254A | [Riptide](https://codeforces.com/contest/2254/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/A%20-%20Riptide/solution.cpp) |
 | 2254G | [Nightcrawler](https://codeforces.com/contest/2254/problem/G) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2254/G%20-%20Nightcrawler/solution.cpp) |
+
+### strings
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2257A | [Creating Abbreviations](https://codeforces.com/contest/2257/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2257/A%20-%20Creating%20Abbreviations/solution.cpp) |
 
 ### trees
 
