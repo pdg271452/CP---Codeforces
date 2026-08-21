@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 13 | 13 |
+| 14 | 13 |
 
 ---
 
@@ -21,7 +21,7 @@
 - [fft](#fft) (1)
 - [greedy](#greedy) (3)
 - [implementation](#implementation) (2)
-- [math](#math) (2)
+- [math](#math) (3)
 - [sortings](#sortings) (2)
 - [strings](#strings) (1)
 - [trees](#trees) (1)
@@ -100,6 +100,7 @@
 |---|---------|------------|----------|
 | 2250A | [Threshold Movement](https://codeforces.com/contest/2250/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/A%20-%20Threshold%20Movement/solution.cpp) |
 | 2255F | [Who Will Witness the End?](https://codeforces.com/contest/2255/problem/F) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/F%20-%20Who%20Will%20Witness%20the%20End%3F/solution.cpp) |
+| 2257B | [Gigantomachy](https://codeforces.com/contest/2257/problem/B) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2257/B%20-%20Gigantomachy/solution.cpp) |
 
 ### sortings
 
