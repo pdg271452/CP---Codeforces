@@ -6,7 +6,7 @@
 
 | Total Problems | Topics |
 |---|---|
-| 15 | 15 |
+| 16 | 16 |
 
 ---
 
@@ -15,15 +15,16 @@
 - [Uncategorized](#uncategorized) (4)
 - [binary search](#binary-search) (1)
 - [bitmasks](#bitmasks) (1)
-- [brute force](#brute-force) (4)
+- [brute force](#brute-force) (5)
 - [constructive algorithms](#constructive-algorithms) (1)
 - [data structures](#data-structures) (4)
 - [dfs and similar](#dfs-and-similar) (1)
 - [dp](#dp) (2)
 - [fft](#fft) (1)
+- [games](#games) (1)
 - [greedy](#greedy) (4)
 - [implementation](#implementation) (2)
-- [math](#math) (4)
+- [math](#math) (5)
 - [sortings](#sortings) (3)
 - [strings](#strings) (1)
 - [trees](#trees) (1)
@@ -59,6 +60,7 @@
 | 2250A | [Threshold Movement](https://codeforces.com/contest/2250/problem/A) | 800 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2250/A%20-%20Threshold%20Movement/solution.cpp) |
 | 2255E1 | [What Will Remain at the End? (Easy Version)](https://codeforces.com/contest/2255/problem/E1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/E1%20-%20What%20Will%20Remain%20at%20the%20End%3F%20(Easy%20Version)/solution.cpp) |
 | 2257A | [Creating Abbreviations](https://codeforces.com/contest/2257/problem/A) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2257/A%20-%20Creating%20Abbreviations/solution.cpp) |
+| 2258B1 | [Carrot Chopdown (Easy Version)](https://codeforces.com/contest/2258/problem/B1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2258/B1%20-%20Carrot%20Chopdown%20(Easy%20Version)/solution.cpp) |
 
 ### constructive algorithms
 
@@ -94,6 +96,12 @@
 |---|---------|------------|----------|
 | 2255F | [Who Will Witness the End?](https://codeforces.com/contest/2255/problem/F) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/F%20-%20Who%20Will%20Witness%20the%20End%3F/solution.cpp) |
 
+### games
+
+| # | Problem | Difficulty | Solution |
+|---|---------|------------|----------|
+| 2258B1 | [Carrot Chopdown (Easy Version)](https://codeforces.com/contest/2258/problem/B1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2258/B1%20-%20Carrot%20Chopdown%20(Easy%20Version)/solution.cpp) |
+
 ### greedy
 
 | # | Problem | Difficulty | Solution |
@@ -118,6 +126,7 @@
 | 2255D | [How Long Until Nothing Remains?](https://codeforces.com/contest/2255/problem/D) | 2300 | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/D%20-%20How%20Long%20Until%20Nothing%20Remains%3F/solution.cpp) |
 | 2255F | [Who Will Witness the End?](https://codeforces.com/contest/2255/problem/F) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2255/F%20-%20Who%20Will%20Witness%20the%20End%3F/solution.cpp) |
 | 2257B | [Gigantomachy](https://codeforces.com/contest/2257/problem/B) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2257/B%20-%20Gigantomachy/solution.cpp) |
+| 2258B1 | [Carrot Chopdown (Easy Version)](https://codeforces.com/contest/2258/problem/B1) | Unrated | [C++23 (GCC 14-64, msys2)](https://github.com/pdg271452/cp---Codeforces/blob/HEAD/2258/B1%20-%20Carrot%20Chopdown%20(Easy%20Version)/solution.cpp) |
 
 ### sortings
 
