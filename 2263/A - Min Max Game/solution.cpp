@@ -1,39 +1,40 @@
-#include <iostream>
-#include <vector>
- 
+/**
+ * @file main.cpp
+ * @author Pranjal Gupta
+ */
+#include <bits/stdc++.h>
 using namespace std;
- 
-void solve() {
-    int n;
-    cin >> n;
-    int count1 = 0;
-    for (int i = 0; i < n; ++i) {
-        int a;
-        cin >> a;
-        if (a == 1) {
-            count1++;
-        }
-    }
-    int elsie_turns = (n - 1) / 2;
-    if (count1 > elsie_turns) {
-        cout << "Bessie
-";
-    } else {
-        cout << "Elsie
-";
-    }
-}
- 
+ 
 int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+ 
     int t;
     cin >> t;
+ 
     while (t--) {
-        solve();
+        int n;
+        cin >> n;
+ 
+        int ones = 0, zeros = 0;
+ 
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;
+ 
+            if (x == 1)
+                ones++;
+            else
+                zeros++;
+        }
+ 
+        if (ones >= zeros)
+            cout << "Bessie
+";
+        else
+            cout << "Elsie
+";
     }
-    
+ 
     return 0;
 }
